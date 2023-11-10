@@ -80,6 +80,14 @@ let transposedMatrix = transposeMatrix(originalMatrix)
 for row in transposedMatrix {
     print(row)
 
+Simplified Matrix Initialization:
 
+Used a more concise approach to initialize the result matrix using a nested map function. This eliminates the need for explicit loops.
+Removed Unnecessary Type Annotations:
+
+Removed explicit type annotations ([[Int]] and [Int]) during the matrix initialization for brevity, as Swift can infer the types.
+Eliminated Mutable Variable:
+
+Since the result matrix is now directly created, there's no need for a mutable variable.
 
 
