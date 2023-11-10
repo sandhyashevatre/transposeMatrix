@@ -43,6 +43,43 @@ for row in transposedMatrix {
 }
 
 
+==========================
+# Matrix Transposition in Swift
+
+This Swift code demonstrates how to transpose a 2D matrix.
+
+## Code Explanation
+
+```swift
+func transposeMatrix(_ matrix: [[Int]]) -> [[Int]] {
+    // Check if the matrix is empty or has empty rows, and return an empty matrix if so.
+    guard !matrix.isEmpty, !matrix[0].isEmpty else { return [] }
+
+    let numRows = matrix.count
+    let numCols = matrix[0].count
+
+    // Use a compact map to create the transposed matrix directly.
+    let result = (0..<numCols).map { j in
+        (0..<numRows).map { i in matrix[i][j] }
+    }
+
+    return result
+}
+
+// Define an original matrix.
+let originalMatrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+// Call the `transposeMatrix` function to get the transposed matrix.
+let transposedMatrix = transposeMatrix(originalMatrix)
+
+// Print the transposed matrix.
+for row in transposedMatrix {
+    print(row)
+
 
 
 
